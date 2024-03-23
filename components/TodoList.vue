@@ -2,7 +2,7 @@
     <div v-if="tasks.length > 0">
 
 
-        <TodoListTask v-for="task, index in tasks" :key="task.id" :task="{
+        <TodoListItem v-for="task, index in tasks" :key="task.id" :task="{
         'task': task,
         'index': index
     }" class="mt-beside w-full" />

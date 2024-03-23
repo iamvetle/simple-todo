@@ -6,7 +6,7 @@
         focus:outline-none
         "
         >
-        <button @click="addTask" class="h-fit hover:bg-blue-300 text-caption ms-2 text-white bg-blue-500 p-1 rounded-sm">
+        <button @click="addTask" class="h-fit mt-beside hover:bg-blue-300 text-body ms-2 text-white bg-blue-500 p-2 rounded-sm">
             Add
         </button>
     </div>

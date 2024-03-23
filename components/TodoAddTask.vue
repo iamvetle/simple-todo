@@ -1,14 +1,14 @@
 <template>
-    <div id="add-task" class="text-subheading">
+    <div id="add-task" class="text-subheading flex flex-col">
         <input type="text" v-model="taskName" @keydown.enter="addTask"
         placeholder="Write a new task..."
-        
         class="border-b border-sm w-full p-2
-        
         focus:outline-none
         "
-        
         >
+        <button @click="addTask" class="h-fit hover:bg-blue-300 text-caption ms-2 text-white bg-blue-500 p-1 rounded-sm">
+            Add
+        </button>
     </div>
 </template>
 

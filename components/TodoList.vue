@@ -1,15 +1,15 @@
 <template>
-    <div>
-        <div v-if="tasks.length > 0" class="flex w-full flex-col">
-            <TodoListTask v-for="task, index in tasks" :key="task.id" :task="{
-            'task': task,
-            'index': index
-        }" class="mt-beside" />
+    <div v-if="tasks.length > 0">
 
-        </div>
-        <div v-else class="flex w-full text-subheading justify-start ms-tight">You have no tasks</div>
+
+        <TodoListTask v-for="task, index in tasks" :key="task.id" :task="{
+        'task': task,
+        'index': index
+    }" class="mt-beside w-full" />
 
     </div>
+    <div v-else class="flex w-full text-subheading justify-start ms-tight">You have no tasks</div>
+
 </template>
 
 

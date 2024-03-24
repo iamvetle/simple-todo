@@ -5,5 +5,5 @@ export default defineNuxtConfig({
     "@vueuse/nuxt",
     '@nuxtjs/tailwindcss'
   ],
-  ssr:false
+  // ssr:false
 })

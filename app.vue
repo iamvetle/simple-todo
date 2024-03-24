@@ -7,7 +7,12 @@
       <div class="flex flex-1 flex-col mt-doubleDistance mb-doubleDistance justify-between max-w-[550px] mx-auto w-full">
 
         <div class="mx-auto w-full">
-          <TodoList class=""/>
+          <ClientOnly>
+            <TodoList class=""/>
+            <template #fallback>
+              <div></div>
+            </template>
+          </ClientOnly>
         </div>
       <TodoAddTask class="text-center min-mt-doubleDistance w-full"/>
       </div>
@@ -17,6 +22,11 @@
 </template>
 
 <script setup lang="ts">
+
+useSeoMeta({
+  title:"Todo"
+})
+
 
 // 80 character width might be 550px in width
 

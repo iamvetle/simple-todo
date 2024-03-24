@@ -1,5 +1,5 @@
 <template>
-    <div v-if="tasks.length > 0">
+    <div v-if="tasks.length > 0" v-auto-animate>
 
 
         <TodoListItem v-for="task, index in tasks" :key="task.id" :task="{
@@ -28,15 +28,9 @@ type Task = {
  */
 
 import { useLocalStorage } from "@vueuse/core"
+import { vAutoAnimate } from "@formkit/auto-animate"
 
 // Tasks are stored in local storage
 const tasks = useLocalStorage<Task[]>("tasks", []);
 
 </script>
-
-<style scoped>
-#todo-list {
-    display: flex;
-    flex-direction: column;
-}
-</style>

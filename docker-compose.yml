@@ -1,0 +1,10 @@
+version: "3"
+services:
+  my-app:
+    build:
+      context: .
+    ports:
+      - "3000:3000"
+
+
+# https://markus.oberlehner.net/blog/running-nuxt-3-in-a-docker-container/

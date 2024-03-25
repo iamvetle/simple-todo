@@ -22,9 +22,8 @@
 </template>
 
 <script setup lang="ts">
-
-useSeoMeta({
-  title:"Todo"
+useHead({
+  title:"Todo list"
 })
 
 

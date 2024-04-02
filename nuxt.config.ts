@@ -4,21 +4,13 @@ export default defineNuxtConfig({
   modules:[
     "@vueuse/nuxt",
     '@nuxtjs/tailwindcss',
-    '@vite-pwa/nuxt'
   ],
-  // ssr:false
-  ignore: [
-    "**/*.stories.{js,cts,mts,ts,jsx,tsx}",
-    "**/*.{spec,test}.{js,cts,mts,ts,jsx,tsx}",
-    "**/*.d.{cts,mts,ts}",
-    "**/.{pnpm-store,vercel,netlify,output,git,cache,data}",
-    ".nuxt/analyze",
-    ".nuxt",
-    "**/-*.*",
-    "Dockerfile",
-    "Dockerignore",
-    ".github",
-    ".devcontainer",
-    ".vscode"
-  ]
+  nitro: {
+    prerender: {
+      // Have to specify this (npx nuxi generate) or manifest.json will become a html file..
+      ignore: [
+        "/manifest.json"
+      ]
+    }
+  }
 })

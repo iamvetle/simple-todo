@@ -1,28 +1,26 @@
-# Use a lightweight Node.js image
+# Stage 1: Builder (installs dependencies)
 FROM node:20.11-alpine AS builder
 
-# Set working directory
 WORKDIR /app
 
-COPY package*.json .
-RUN npm install
+# Copy package*.json files to builder stage
+COPY package*.json ./
+# Install dependencies in builder stage
+RUN npm install && npm install serve
 
-COPY . .
+COPY . ./
 
 RUN npm run generate
 
-# Use a smaller image for production
+# Stage 2: Runner (runs the application)
 FROM node:20.11-alpine
 
-# Set working directory
 WORKDIR /app
 
-# Copy the production-ready build from builder stage
-RUN mkdir .output
-COPY --from=builder /app/.output ./.output
+# Copy only package*.json and application code
+COPY --from=builder /app/.output ./
 
-# Expose port (default Nuxt dev server port)
+# Expose the port for the application
 EXPOSE 3000
 
-# Start the development server
-CMD [ "npm", "run", "preview" ]
+CMD [ "npx", "serve", "public" ]

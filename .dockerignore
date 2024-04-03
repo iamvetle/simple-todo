@@ -2,7 +2,6 @@
 node_modules
 
 # Ignore pnpm-store (if using pnpm)
-.pnpm-store
 Dockerfile
 
 .github
@@ -13,8 +12,6 @@ Dockerfile
 # public/
 
 # Ignore test files
-*.test.js
-*.spec.js
 
 # Ignore environment specific files
 # .env*

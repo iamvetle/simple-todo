@@ -1,7 +1,17 @@
-# .dockerignore
-/.nuxt
-/.output
-/node_modules
+# Ignore node_modules folder
+node_modules
 
-.gitignore
-README.md
+# Ignore pnpm-store (if using pnpm)
+Dockerfile
+
+.github
+.vscode
+.nuxt
+
+# Ignore any build artifacts (adjust based on your build output)
+# public/
+
+# Ignore test files
+
+# Ignore environment specific files
+# .env*

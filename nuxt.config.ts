@@ -3,7 +3,14 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules:[
     "@vueuse/nuxt",
-    '@nuxtjs/tailwindcss'
+    '@nuxtjs/tailwindcss',
   ],
-  // ssr:false
+  nitro: {
+    prerender: {
+      // Have to specify this (npx nuxi generate) or manifest.json will become a html file..
+      ignore: [
+        "/manifest.json"
+      ]
+    }
+  }
 })

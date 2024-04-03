@@ -8,7 +8,7 @@
     }" class="mt-beside w-full" />
 
     </div>
-    <div v-else class="flex w-full text-subheading justify-start ms-tight">You have no tasks</div>
+    <div v-else class="flex w-full text-subheading justify-start ms-tight">No tasks to do</div>
 
 </template>
 

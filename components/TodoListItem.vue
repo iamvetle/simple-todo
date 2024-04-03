@@ -64,7 +64,7 @@ const updateTask = () => {
 }
 
 const textColor = computed(() => completed.value === true ? "line-through" : "")
-// const buttonColor = computed(() => completed.value === true ? "bg-green-500" : "bg-blue-500")
+// const buttonColor = computed(() => completed.value === true ? "bg-green-500" : "bg-blue-800")
 
 
 </script>./CheckedCheckbox.vue

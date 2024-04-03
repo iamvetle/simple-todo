@@ -1,39 +1,26 @@
-# syntax = docker/dockerfile:1
+# Stage 1: Builder (installs dependencies)
+FROM node:20.11-alpine AS builder
 
-ARG NODE_VERSION=20.0
+WORKDIR /app
 
-FROM node:${NODE_VERSION}-slim as base
+# Copy package*.json files to builder stage
+COPY package*.json ./
+# Install dependencies in builder stage
+RUN npm install && npm install serve
 
-# Allows us to override the port later (but default is 3000)
-ARG PORT=3000
+COPY . ./
 
-# because this is dockerfile for our production?
-# ? should i remove this
-ENV NODE_ENV=production
+RUN npm run generate
 
-# The WORKDIR instruction sets the working directory for any instructions that follow it in the Dockerfile.
-WORKDIR /src
+# Stage 2: Runner (runs the application)
+FROM node:20.11-alpine
 
-# Build
-FROM base as build
+WORKDIR /app
 
-COPY --link package.json package-lock.json .
-RUN npm install --production=false
+# Copy only package*.json and application code
+COPY --from=builder /app/.output ./
 
-COPY --link . .
+# Expose the port for the application
+EXPOSE 3000
 
-RUN npm run build
-RUN npm prune
-
-# Run
-FROM base
-
-ENV PORT=$PORT
-
-COPY --from=build /src/.output /src/.output
-# Optional, only needed if you rely on unbundled dependencies
-# COPY --from=build /src/node_modules /src/node_modules
-
-CMD [ "node", ".output/server/index.mjs" ]
-
-# https://markus.oberlehner.net/blog/running-nuxt-3-in-a-docker-container/
+CMD [ "npx", "serve", "public" ]

@@ -7,7 +7,7 @@
         "
         >
         <button @click="addTask" class="h-fit mt-beside hover:bg-blue-500 text-body ms-2 text-white bg-blue-800 p-2 rounded-sm">
-            Add
+            Add task
         </button>
     </div>
 </template>

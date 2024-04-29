@@ -30,7 +30,7 @@
             </template>
           </ClientOnly>
         </div>
-        <TodoAddTask class="text-center mt-doubleDistance w-full" />
+        <TodoAddTask class="text-center min-mt-doubleDistance w-full" />
       </div>
     </div>
   </div>

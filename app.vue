@@ -20,9 +20,9 @@
       </h1>
 
       <div
-        class="flex flex-1 flex-col mt-doubleDistance mb-doubleDistance justify-between max-w-[550px] mx-auto w-full"
+        class="flex flex-1 flex-col mt-doubleDistance justify-between max-w-[550px] mx-auto w-full"
       >
-        <div class="mx-auto w-full">
+        <div class="mx-auto w-full mb-distance">
           <ClientOnly>
             <TodoList class="" />
             <template #fallback>
@@ -30,7 +30,7 @@
             </template>
           </ClientOnly>
         </div>
-        <TodoAddTask class="text-center min-mt-doubleDistance w-full" />
+        <TodoAddTask class="text-center w-full mb-doubleDistance" />
       </div>
     </div>
   </div>

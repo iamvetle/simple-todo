@@ -18,6 +18,19 @@ export default {
         "sixTimesDistance":"1024px",
         "sevenTimesDistance":"2048px"
         },
+        padding: {
+          "verytight":"2px",
+          "tight":"4px",
+          "beside":"8px",
+          "by":"16px",
+          "distance":"32px",
+          "doubleDistance": "64px",
+          "tripleDistance":"128px",
+          "fourTimesDistance":"256px",
+          "fiveTimesDistance":"512px",
+          "sixTimesDistance":"1024px",
+          "sevenTimesDistance":"2048px"
+        },
         fontSize: {
             // Hierarchy-based font sizes
             "heading1": '2.5rem',

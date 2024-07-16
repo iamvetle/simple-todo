@@ -21,12 +21,7 @@
 				class="flex flex-1 flex-col mt-doubleDistance justify-between max-w-[550px] mx-auto w-full"
 			>
 				<div class="mx-auto w-full mb-distance">
-					<ClientOnly>
-						<TodoList class="" />
-						<template #fallback>
-							<div></div>
-						</template>
-					</ClientOnly>
+					<TodoList />
 				</div>
 				<TodoAddTask class="text-center w-full pb-doubleDistance" />
 			</div>

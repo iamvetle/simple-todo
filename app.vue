@@ -36,7 +36,7 @@
 
 <script setup lang="ts">
 	useSeoMeta({
-		title: "Todo list",
+		title: "Todo",
 		viewport: "width=device-width, initial-scale=1",
 		description: "A simple app for organizing tasks to do",
 	});

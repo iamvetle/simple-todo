@@ -1,7 +1,9 @@
 <template>
 	<VitePwaManifest />
 	<div id="site-wrapper">
-		<!-- ios support -->
+		<!-- ios support 
+		* dont know if I need that - it might be OK to just have 180x 
+		-->
 		<Link rel="apple-touch-icon" href="ios/72.png" />
 		<Link rel="apple-touch-icon" href="ios/128.png" />
 		<Link rel="apple-touch-icon" href="ios/144.png" />
@@ -34,7 +36,7 @@
 
 <script setup lang="ts">
 	useSeoMeta({
-		title: "Todo list",
+		title: "Todo",
 		viewport: "width=device-width, initial-scale=1",
 		description: "A simple app for organizing tasks to do",
 	});
@@ -66,7 +68,7 @@
 			{
 				rel: "apple-touch-icon",
 				sizes: "180x180",
-				href: "ios/apple-touch-icon.png",
+				href: "/ios/180.png",
 			},
 		],
 	});

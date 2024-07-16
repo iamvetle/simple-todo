@@ -4,12 +4,12 @@
 		<!-- ios support 
 		* dont know if I need that - it might be OK to just have 180x 
 		-->
-		<Link rel="apple-touch-icon" href="ios/72.png" />
-		<Link rel="apple-touch-icon" href="ios/128.png" />
-		<Link rel="apple-touch-icon" href="ios/144.png" />
-		<Link rel="apple-touch-icon" href="ios/152.png" />
-		<Link rel="apple-touch-icon" href="ios/192.png" />
-		<Link rel="apple-touch-icon" href="ios/512.png" />
+		<Link rel="apple-touch-icon" href="/ios/72.png" />
+		<Link rel="apple-touch-icon" href="/ios/128.png" />
+		<Link rel="apple-touch-icon" href="/ios/144.png" />
+		<Link rel="apple-touch-icon" href="/ios/152.png" />
+		<Link rel="apple-touch-icon" href="/ios/192.png" />
+		<Link rel="apple-touch-icon" href="/ios/512.png" />
 		<div class="min-h-screen flex flex-col px-2 mx-auto">
 			<h1
 				class="text-center font-bold text-heading1 mt-doubleDistance w-full"
@@ -21,7 +21,12 @@
 				class="flex flex-1 flex-col mt-doubleDistance justify-between max-w-[550px] mx-auto w-full"
 			>
 				<div class="mx-auto w-full mb-distance">
-					<TodoList />
+					<ClientOnly>
+						<TodoList />
+						<template #fallback>
+							<div></div>
+						</template>
+					</ClientOnly>
 				</div>
 				<TodoAddTask class="text-center w-full pb-doubleDistance" />
 			</div>
@@ -63,7 +68,7 @@
 			{
 				rel: "apple-touch-icon",
 				sizes: "180x180",
-				href: "/ios/180.png",
+				href: "/ios/180-wb.png",
 			},
 		],
 	});

@@ -109,5 +109,5 @@ export default defineNuxtConfig({
 		},
 		devOptions: { enabled: true, type: "module" },
 	},
-	ssr: false,
+	// ssr: false,
 });

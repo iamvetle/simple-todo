@@ -88,4 +88,3 @@
 	);
 	// const buttonColor = computed(() => completed.value === true ? "bg-green-500" : "bg-blue-800")
 </script>
-./CheckedCheckbox.vue

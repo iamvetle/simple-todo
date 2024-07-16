@@ -1,7 +1,9 @@
 <template>
 	<VitePwaManifest />
 	<div id="site-wrapper">
-		<!-- ios support -->
+		<!-- ios support 
+		* dont know if I need that - it might be OK to just have 180x 
+		-->
 		<Link rel="apple-touch-icon" href="ios/72.png" />
 		<Link rel="apple-touch-icon" href="ios/128.png" />
 		<Link rel="apple-touch-icon" href="ios/144.png" />

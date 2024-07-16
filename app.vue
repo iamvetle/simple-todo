@@ -68,7 +68,7 @@
 			{
 				rel: "apple-touch-icon",
 				sizes: "180x180",
-				href: "ios/180.png",
+				href: "/ios/180.png",
 			},
 		],
 	});

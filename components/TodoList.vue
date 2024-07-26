@@ -2,7 +2,7 @@
 	<div v-if="tasks.length > 0" v-auto-animate>
 		<TodoListItem
 			v-for="(task, index) in tasks"
-			:key="task.id"
+			:key="task.date_created"
 			:task="{
 				task: task,
 				index: index,
@@ -20,9 +20,8 @@
 
 <script lang="ts">
 	type Task = {
-		id: number;
 		name: string;
-		date_created: string;
+		date_created: number;
 		completed: boolean;
 	};
 </script>

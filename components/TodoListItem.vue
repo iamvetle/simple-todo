@@ -39,9 +39,8 @@
 
 <script lang="ts">
 	type Task = {
-		id: number;
 		name: string;
-		date_created: string;
+		date_created: number;
 		completed: boolean;
 	};
 </script>

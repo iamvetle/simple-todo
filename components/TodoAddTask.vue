@@ -18,9 +18,8 @@
 
 <script lang="ts">
 	type Task = {
-		id: number;
 		name: string;
-		date_created: string;
+		date_created: number;
 		completed: boolean;
 	};
 </script>
@@ -36,17 +35,15 @@
 		// alert("addtask");
 
 		if (taskName.value.trim() != "") {
-			const lastIndex = tasks.value.length;
+			const currentDate = Date.now();
 
 			const task = <Task>{
-				id: lastIndex,
 				name: taskName.value,
-				date_created: formatted.value,
+				date_created: currentDate,
 				completed: false,
 			};
 
 			tasks.value.push(task);
-			console.log(task); // print to self
 			taskName.value = "";
 		}
 	};
